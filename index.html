@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <button id="theme-toggle">Change Theme</button>
+        <button id="backToTop">↑ Top</button>
+    </header>
+    <main>
+        <section class="home-card">
+            <h2 id="home-title">Home</h2>
+            <p>Welcome to my portfolio!</p>
+            <p>I am a <span id="typing-text"></span></p>
+        </section>
+        <section class="about-card">
+            <h2 id="about-title">About</h2>
+            <p>I'm Ifa Bogale, and I recently received my computer science degree from Haramaya University. I have a solid background in web development and programming, which I have refined via challenging coursework and practical projects. My passions are investigating new technology and finding solutions to challenging issues. I have actively participated in cooperative team projects throughout my academic career, which has helped me develop my analytical and collaborative skills. I can't wait to use my skills and contribute to cutting-edge tech sector solutions as I get ready to enter the workforce.</p>
+        </section>
+        <section class="projects-card">
+            <h2 id="projects-title">Projects</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="All">All</button>
+                <button class="filter-btn" data-filter="HTML/CSS">HTML/CSS</button>
+                <button class="filter-btn" data-filter="JavaScript">JavaScript</button>
+                <button class="filter-btn" data-filter="QA/Testing">QA/Testing</button>
+            </div>
+            <div class="projects-grid" id="projects-container">
+            </div>
+        </section>
+        <section class="testimonals-card">
+            <h2 id="testimonals-title">Testimonals</h2>
+            <p>What people say about my work (Fetched from API):</p>
+            <div class="testimonals-grid" id="testimonals-container">
+                <p>Loading reviews...</p>
+            </div>
+        </section>
+        <section class="contact-card">
+            <h2 id="contact-title">Contact</h2>
+            <form id="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your name">
+                    <span class="error-msg" id="name-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="example@gmail.com">
+                    <span class="error-msg" id="email-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="5" placeholder="How can I help you?"></textarea>
+                    <span class="error-msg" id="message-error"></span>
+                </div>
+
+                <button type="submit" id="submit-btn">Send Message</button>
+            </form>
+            <div id="success-banner" class="hidden">
+                <p>Message sent successfully!</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright 2025 Ifa Bogale</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

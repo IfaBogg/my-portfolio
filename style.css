@@ -1,0 +1,310 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+header:hover {
+    background-color: #555;
+    transition: 0.5s;
+}
+/* Back to Top Button */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+}
+/* Dark Mode Class */
+body.dark-theme {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+body.dark-theme .home-card, 
+body.dark-theme .about-card, 
+body.dark-theme .projects-card, 
+body.dark-theme .contact-card,
+body.dark-theme .projects-item {
+    background-color: #2d2d2d;
+    color: white;
+    border-left-color: #444;
+}
+body.dark-theme h2 {
+    color: #fff;
+    border-bottom-color: #444;
+}
+
+/*  */
+h2 {
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+main section {
+    margin-bottom: 20px;
+    padding: 15px 0;
+}
+p {
+    margin-bottom: 15px;
+    padding: 10px;
+    line-height: 1.6;
+}
+ul {
+    margin-bottom: 20px;
+    padding-left: 25px;
+}
+.home-card {
+    background-color: #fff;
+    border-left: 10px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+}
+.about-card {
+    background-color: #f0f0f0;
+    border-left: 10px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.projects-card {
+    background-color: #fff;
+    border-left: 10px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* This is the container for the 3 side-by-side items */
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start; /* Items stay aligned to the left */
+    margin-top: 15px;
+}
+
+/* Individual project items */
+.projects-item {
+    /* Corrected spaces in calc() */
+    flex: 1 1 calc(33.333% - 20px); 
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    min-width: 250px; /* Forces stack on small screens */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* --- MOBILE RESPONSIVENESS FIX --- */
+@media (max-width: 800px) {
+    .projects-item {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    body{
+        width: 95%;
+        margin: 10px auto;
+        padding: 10px;
+    }
+    header,footer{
+        padding: 15px;
+    }
+    .home-card, .about-card, .projects-card, .contact-card {
+        border-left: 5px solid #333;
+        padding: 15px;
+    }
+}
+
+
+/*  */
+.contact-card {
+    background-color: lightgray;
+    border-left: 10px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+}
+.home-card:hover, .about-card:hover, .projects-card:hover, .contact-card:hover {
+    background-color: #f0f0f0;
+    border-left-color: #007bff;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.home-card p, .about-card p, .projects-card p, .contact-card p {
+    font-weight: bold;
+    color: #444;
+}
+.home-card p, .about-card p, .projects-card p, .contact-card h2 {
+    font-weight: bold;
+    color: #333;
+}
+.home-card p, .about-card p, .projects-card p, .contact-card ul {
+    font-weight: bold;
+    color: #444;
+}
+
+#home-title {
+    color: #007bff;
+}
+#about-title {
+    color: #ff2600;
+}
+#projects-title {
+    color: #ffd700;
+}
+#contact-title {
+    color: #b3ff00;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+footer p {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #bbb;
+}
+footer:hover {
+    background-color: #555;
+    transition: 0.5s;
+}
+
+
+/* Contact-section  */
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--text-color, #333);
+}
+.error-msg {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+    height: 15px;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+}
+.hidden {
+    display: none;
+}
+#success-banner {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+}
+body.dark-theme label, body.dark-theme input, body.dark-theme textarea {
+    color: white;
+    background-color: #333;
+    border: 1px solid #555;
+}
+#success-banner, .error-msg {
+    transition: all 0.3s ease;
+}
+
+
+/* button */
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+.filter-btn {
+    padding: 8px 16px;
+    border: 2px solid #007bff;
+    background: transparent;
+    color: #333;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.filter-btn:hover {
+    background-color: #e6f0ff;
+}
+.filter-btn.active {
+    background-color: #007bff;
+    color: white;
+}
+body.dark-theme .filter-btn {
+    color: white;
+    border-color: #007bff;
+}
+body.dark-theme .filter-btn:hover {
+    background-color: #333;
+}
+body.dark-theme .filter-btn.active {
+    background-color: #007bff;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+} 
+
+/* testimonals */
+.testimonals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+.testimonals-item {
+    background-color: #fff;
+    padding: 20px;
+    border-left: 5px solid #ff9800;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-style: italic;
+}
+.testimonals-author {
+    margin-top: 10px;
+    font-weight: bold;
+    font-style: normal;
+    color: #333;
+    display: block;
+    text-align: right;
+}
+/* Dark mode */
+body.dark-theme .testimonals-item {
+    background-color: #2d2d2d;
+    color: #ddd;
+    border-left-color: #ff9800;
+}
+body.dark-theme .testimonals-author {
+    color: #fff;
+}

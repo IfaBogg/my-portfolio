@@ -1,15 +1,25 @@
-// selecting element
+// selecting btn
 const themeBtn = document.getElementById('theme-toggle');
+const savedTheme = localStorage.getItem('theme');
 const topBtn = document.getElementById('backToTop');
+
+if (savedTheme === 'dark') {
+    document.body.classList.add('dark-theme');
+    themeBtn.textContent = "Light Mode";
+}
 
 // Dark mode
 themeBtn.addEventListener('click', () => {
     document.body.classList.toggle('dark-theme');
+
+    let theme = 'light';
     if (document.body.classList.contains('dark-theme')) {
+        theme = 'dark';
         themeBtn.textContent = "Light Mode";
     } else {
         themeBtn.textContent = "Dark Mode"
     }
+    localStorage.setItem('theme', theme);
 });
 
 // Show back to top
@@ -27,7 +37,7 @@ topBtn.addEventListener('click', () => {
 
 // home
 const textElement = document.getElementById('typing-text');
-const words = ["Computer Scientist", "QA Engineer", "Web Developer"];
+const words = ["Computer Scientist", "QA Professional", "Full-Stack Enthusiast"];
 let wordIndex = 0;
 let charIndex = 0;
 

@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Ifa Bogale - Computer Science Graduate, QA Engineer, and Web Developer.">
+    <meta name="keywords" content="Ifa Bogale, QA Engineer, Web Developer, Computer Science, Portfolio">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>My Portfolio</h1>
-        <button id="theme-toggle">Change Theme</button>
-        <button id="backToTop">↑ Top</button>
+        <div class="header-buttons">
+            <a href="resume.pdf" download="Ifa_Bogale_Resume" class="download-btn">Download CV</a>
+            
+            <button id="theme-toggle">Change Theme</button>
+            <button id="backToTop">↑ Top</button>
+        </div>
     </header>
     <main>
         <section class="home-card">
@@ -19,8 +25,21 @@
             <p>I am a <span id="typing-text"></span></p>
         </section>
         <section class="about-card">
-            <h2 id="about-title">About</h2>
-            <p>I'm Ifa Bogale, and I recently received my computer science degree from Haramaya University. I have a solid background in web development and programming, which I have refined via challenging coursework and practical projects. My passions are investigating new technology and finding solutions to challenging issues. I have actively participated in cooperative team projects throughout my academic career, which has helped me develop my analytical and collaborative skills. I can't wait to use my skills and contribute to cutting-edge tech sector solutions as I get ready to enter the workforce.</p>
+            <h2 id="about-title">About Me</h2>
+            <p><strong>Software QA Engineer & Web Developer</strong></p>
+            
+            <p>A Computer Science graduate from <strong>Haramaya University</strong> with over a year of hands-on experience in software development and quality assurance. I specialize in building robust web applications and finding creative solutions to technical problems through clean code and rigorous testing.</p>
+        
+            <p>Since graduating, I have focused on mastering modern frameworks and automation tools, ensuring that the software I build is not only functional but also highly reliable and user-friendly.</p>
+            
+            <div class="skills-chips">
+                <strong>Core Expertise:</strong>
+                <span>JavaScript</span> 
+                <span>QA Testing</span> 
+                <span>Python</span> 
+                <span>Web Development</span>
+                <span>API Integration</span>
+            </div>
         </section>
         <section class="projects-card">
             <h2 id="projects-title">Projects</h2>
@@ -33,10 +52,10 @@
             <div class="projects-grid" id="projects-container">
             </div>
         </section>
-        <section class="testimonals-card">
-            <h2 id="testimonals-title">Testimonals</h2>
+        <section class="testimonial-card">
+            <h2 id="testimonial-title">Testimonals</h2>
             <p>What people say about my work (Fetched from API):</p>
-            <div class="testimonals-grid" id="testimonals-container">
+            <div class="testimonial-grid" id="testimonial-container">
                 <p>Loading reviews...</p>
             </div>
         </section>
